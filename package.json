@@ -1,0 +1,18 @@
+{
+  "name": "prova-test-softwre",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha prova-test-softwre.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chromedriver": "^135.0.2",
+    "fs": "^0.0.1-security",
+    "mocha": "^11.1.0",
+    "selenium-webdriver": "^4.31.0"
+  }
+}
