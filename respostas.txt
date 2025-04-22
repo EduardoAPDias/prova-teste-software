@@ -3,3 +3,4 @@ Explique como o Selenium funciona para Python e NodeJS, pode usar o site oficial
 O Selenium emula a interação do usuario com o browser atraves de ferramentas 
 que automatizam ações. Essa ferramentas possibilitam automatizar cliques, digitar 
 e varias outras ações atraves do webdriver como nos exemplos estudados em sala.
+Nos testes da prova foi usado para clicar e digitar nos campos, e nos exerciciso em sala tirar printscreen.

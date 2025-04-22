@@ -11,7 +11,8 @@ import time
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.maximize_window()
 
-try: #captura erros na execução  
+try: #captura erros na execução 
+    url = "https://www.hankeds.com.br/prova/login.html" #URL
     driver.get(url) #URL
 
     time.sleep(2) #Espera
@@ -25,22 +26,22 @@ try: #captura erros na execução
     senha = driver.find_element(By.ID, "password")#acha password por ID
     botao = driver.find_element(By.XPATH, "//button[contains(text(), 'Entrar')]") # acha o botão por xpath
 
-    digitar_lento(usuario, "admin") #digita e espera
-    time.sleep(1)
-    digitar_lento(senha, "admin123456") #digita e espera
-    time.sleep(1)
+    digitar_lento(usuario, "admin") #admin respeitando a espera
+    time.sleep(1) #espera
+    digitar_lento(senha, "admin123456") #digita senha respeitando a espera
+    time.sleep(1)#espera
 
-    botao.click()
-    time.sleep(4)
+    botao.click() #clica no botão especificado
+    time.sleep(4)#espera
 
     if "destino.html" in driver.current_url: #confirma o destino e se deu certo
         print(" Teste passou: redirecionado corretamente.")
     else:
         print(" Teste falhou: redirecionamento não ocorreu.")
 
-    time.sleep(5)
+    time.sleep(5)#espera
 
-except Exception as e:
+except Exception as e: #se teve erro no teste print do erro
     print(" Erro durante o teste:", str(e))
 
 finally:
